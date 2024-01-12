@@ -29,7 +29,13 @@ local frames = {}
 -- Private Functions --
 
 local function getSoundsFolder()
+	for _, object in ReplicatedStorage:GetDescendants() do
+		if object:IsA("Folder") and object.Name == settings.SoundsFolder then
+			return object
+		end
+	end
 	
+	return nil
 end
 
 -- Public Functions --
@@ -80,7 +86,7 @@ function tweenModule:AddButton(button: GuiButton, frame: Frame?, soundName: stri
 				settings.SoundsFolder = getSoundsFolder(settings.SoundsFolder)
 			end
 		else
-			warn("Can't find SoundsFolder named '"..settings.SoundsFolder.."' in Replicated Storage.")
+			warn("UI Tweener: Can't find SoundsFolder, sounds will not function")
 		end
 		
 		if settings.SoundsFolder and soundName and settings.SoundsFolder:FindFirstChild(soundName) then
