@@ -5,7 +5,8 @@ Welcome to the UI Tweener github page! This module is **Client Side** and will n
 This is a module that allows you to open menus in your game with smooth animations without requiring you to code it all yourself. This works with multiple UI at a time and is used in Super Power Evolution Simulator (2M visits) scripted by me.
 
 # How to get
-Roblox Marketplace: 
+Roblox Marketplace: https://create.roblox.com/marketplace/asset/15954835037
+
 Github Releases: https://github.com/nevflorals/UITweener/releases
 
 # Setup
